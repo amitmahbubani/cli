@@ -13,7 +13,7 @@ RELEASE_VERSION=$($SVU_BIN patch)
 
 echo "+++ :boom: Bumping to version $RELEASE_VERSION"
 
-git tag "$(svu next)"
+git tag "$RELEASE_VERSION"
 git push --tags
 
 echo "✅"
