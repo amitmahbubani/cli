@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# This fetches the data that was filled out in the previous block
-# step and outputs the values
-
 set -eu
 
+
+WORKDIR=$(PWD)
+SVU_BIN="${WORKDIR}/svu"
+
 echo "+++ :construction:  Installing 'svu' tool"
-curl -sfL https://install.goreleaser.com/github.com/caarlos0/svu.sh | bash -s -- -b .
+curl -sfL https://install.goreleaser.com/github.com/caarlos0/svu.sh | bash -s -- -b $WORKDIR
 
 
-RELEASE_VERSION=$(svu minor)
+RELEASE_VERSION=$($SVU_BIN minor)
 
 
 echo "+++ :boom: Bumping to version $RELEASE_VERSION"
