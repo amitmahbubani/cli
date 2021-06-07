@@ -3,7 +3,7 @@
 set -eu
 
 
-WORKDIR=$(PWD)
+WORKDIR=$(pwd)
 SVU_BIN="${WORKDIR}/svu"
 
 echo "+++ :construction:  Installing 'svu' tool"
