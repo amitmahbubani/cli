@@ -13,13 +13,12 @@ steps:
 
 - wait
 
+- block: ":rocket: Release!"
 
 - command: script/release.sh
   label: ":rocket:"
 
 - wait
-
-- block: ":rocket: Release!"
 
 - label: ":github: Release"
   plugins:
