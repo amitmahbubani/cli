@@ -16,7 +16,7 @@ steps:
 - block: ":rocket: Release!"
 
 - command: script/release.sh
-  label: ":rocket:"
+  label: ":rocket: Bump version"
 
 - wait
 
